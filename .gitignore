@@ -2,7 +2,9 @@
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 
-application.yml
+### Application Secret ###
+*.yml
+src/main/resources/application.yml
 
 ### STS ###
 .apt_generated
