@@ -1,2 +1,1 @@
 # astee-start-server
-test
