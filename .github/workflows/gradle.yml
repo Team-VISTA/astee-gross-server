@@ -22,15 +22,18 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
-    - name: where I am?
+    - name: pwd
       run: pwd
-      
+
+    - name: list files
+      run: ls -al
+
     ## create OAuth2 setting file
     - name: make application.yml
       run: |
         ## create application.yml
-        cd src/main/resources
-        touch ./applicatioin.yml
+        cd .src/main/resources
+        touch ./application.yml
         echo "${{ secrets.ENV }}" >> ./application.yml
       shell: bash
 
