@@ -26,7 +26,7 @@ jobs:
     - name: make application.yml
       run: |
         ## create application.yml
-        cd .src/main/resources
+        cd src/main/resources
         touch ./applicatioin.yml
         echo "${{ secrets.ENV }}" >> ./application.yml
       shell: bash
