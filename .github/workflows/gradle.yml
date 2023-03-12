@@ -22,12 +22,6 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
-    - name: pwd
-      run: pwd
-
-    - name: list files
-      run: ls -al
-
     ## create OAuth2 setting file
     - name: make application.yml
       run: |
@@ -51,7 +45,7 @@ jobs:
       run: ./gradlew bootJar
 
     ## build and push web image
-    - name: web) docker build and push
+    - name: docker build and push web image
       run: |
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
         docker build -t ${{ secrets.DOCKER_REPO }}/astee-web .
