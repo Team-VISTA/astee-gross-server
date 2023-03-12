@@ -32,7 +32,7 @@ jobs:
     - name: make application.yml
       run: |
         ## create application.yml
-        cd ./src/main
+        cd ./src/main/resources
         touch ./application.yml
         echo "${{ secrets.ENV }}" >> ./application.yml
       shell: bash
