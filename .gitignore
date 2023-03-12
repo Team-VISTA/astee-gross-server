@@ -3,7 +3,6 @@
 !gradle/wrapper/gradle-wrapper.jar
 
 ### Application Secret ###
-*.yml
 src/main/resources/application.yml
 
 ### STS ###
