@@ -41,7 +41,7 @@ jobs:
     - name: make application-database.yml
       run: |
         ## create application-database.yml
-        cd ./src/main/resources
+        cd src/main/resources
         touch ./application-database.yml
         echo "${{ secrets.DATABASE }}" >> ./application-database.yml
       shell: bash
