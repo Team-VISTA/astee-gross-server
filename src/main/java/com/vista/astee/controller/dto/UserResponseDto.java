@@ -1,8 +1,7 @@
-package com.vista.astee.domain.dto.user;
+package com.vista.astee.controller.dto;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Getter
 @Builder

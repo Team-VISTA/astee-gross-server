@@ -1,26 +1,20 @@
 package com.vista.astee.service;
 
-import com.vista.astee.domain.dto.ResDto;
-import com.vista.astee.domain.dto.user.UserResponseDto;
+import com.vista.astee.controller.dto.ResDto;
 import com.vista.astee.domain.user.User;
 import com.vista.astee.domain.user.UserRepository;
-import com.vista.astee.util.ErrorMessageUtil;
+import com.vista.astee.utils.ErrorMessageUtil;
 import lombok.RequiredArgsConstructor;
-import org.bson.codecs.ObjectIdGenerator;
-import org.bson.types.ObjectId;
-import org.springframework.data.mongodb.core.aggregation.ConvertOperators;
 import org.springframework.stereotype.Service;
-
-import java.io.IOException;
 
 @RequiredArgsConstructor
 @Service
 public class UserService {
     private final UserRepository userRepository;
 
-    public ResDto getUserInfo(String userId) {
+    public ResDto getUserInfo(Long userId) {
         try {
-            User user = userRepository.findUserById(userId);
+            User user = userRepository.findUserByUserId(userId);
             if (user == null) {
                 return ResDto.builder()
                         .resultCode(404)

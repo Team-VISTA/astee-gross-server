@@ -15,7 +15,7 @@ public class UserController {
     public final UserService userService;
 
     @GetMapping("/{userId}")
-    public ResponseEntity<Object> getUserInfo(@PathVariable String userId) {
+    public ResponseEntity<Object> getUserInfo(@PathVariable Long userId) {
         try{
             return ResponseEntity.ok().body(userService.getUserInfo(userId));
         } catch(Exception e){

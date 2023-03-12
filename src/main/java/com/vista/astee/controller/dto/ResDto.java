@@ -1,4 +1,4 @@
-package com.vista.astee.domain.dto;
+package com.vista.astee.controller.dto;
 
 import lombok.Builder;
 import lombok.Getter;
