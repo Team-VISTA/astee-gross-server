@@ -22,6 +22,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
+    - name: where I am?
+      run: pwd
+      
     ## create OAuth2 setting file
     - name: make application.yml
       run: |
