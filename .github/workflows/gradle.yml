@@ -64,3 +64,6 @@ jobs:
           sudo docker pull ${{ secrets.DOCKER_REPO }}/astee-nginx
           docker-compose up -d
           docker image prune -f
+
+    - name: check docker
+      run: docker images
