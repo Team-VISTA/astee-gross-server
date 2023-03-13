@@ -8,6 +8,8 @@ services:
       - 8080
     ports:
       - "8080:8080"
+    volumes:
+      - /home/ubuntu/log:/var/log
 
   nginx:
     container_name: nginx
